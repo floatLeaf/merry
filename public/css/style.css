@@ -1,0 +1,286 @@
+input, select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 250px;
+  height: 32px;
+  padding: 3px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  float: left; }
+
+.normalInput {
+  width: 250px; }
+
+.shortInput {
+  width: 110px;
+  margin-right: 10px; }
+
+.longInput {
+  width: 500px; }
+
+textarea {
+  width: 364px;
+  height: 100px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+
+.smallTextarea {
+  width: 250px;
+  height: 80px; }
+
+.item-content-list .value label input[type="radio"]:focus, .item-content-list .value input:focus, .item-content-list .value textarea:focus, .item-content-list .value select:focus, .item-content-list .value .price input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+
+.lf, .content-main .tabs .tab-item, .content-main .main-items .item .item-name, .item-content-list .name, .item-content-list .value label, .item-content-list .value .price span {
+  float: left; }
+
+.rg {
+  float: right; }
+
+.align-center, .content-main .tabs .tab-item, .content-main .main-items .item .item-name {
+  text-align: center; }
+
+body {
+  background: #F2F2F2; }
+
+a {
+  color: #38f; }
+
+.content-top {
+  height: 63px;
+  line-height: 63px;
+  background: #FFF;
+  padding: 0 30px; }
+
+.content-main {
+  padding: 15px;
+  margin: 15px;
+  background: #FFF; }
+  .content-main .tabs {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px; }
+    .content-main .tabs .tab-item {
+      width: 50%;
+      font-weight: bold;
+      background: #F2F2F2;
+      border: 1px solid #ddd;
+      box-sizing: border-box; }
+    .content-main .tabs .tab-item:nth-child(2) {
+      border-left: 0; }
+    .content-main .tabs .active {
+      background: #FFF; }
+  .content-main .main-items {
+    background: #F2F2F2; }
+    .content-main .main-items .item {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      border-bottom-width: 8px;
+      border-bottom-style: solid;
+      border-bottom-color: #FFF; }
+      .content-main .main-items .item .item-name {
+        padding: 20px 0;
+        width: 90px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: bold;
+        line-height: 32px; }
+      .content-main .main-items .item .item-content {
+        padding: 20px 0;
+        width: auto;
+        margin-left: 100px;
+        border-left-width: 2px;
+        border-left-style: solid;
+        border-left-color: #FFF; }
+
+.item-content-list {
+  width: 100%;
+  margin-bottom: 12px;
+  position: relative; }
+  .item-content-list .name {
+    width: 110px;
+    text-align: right;
+    line-height: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .item-content-list .value {
+    display: inline-block;
+    margin-left: 120px;
+    overflow: hidden; }
+    .item-content-list .value label {
+      display: inline-block;
+      position: relative;
+      padding-left: 20px;
+      margin-right: 20px;
+      height: 34px;
+      line-height: 34px; }
+      .item-content-list .value label input[type="radio"] {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 14px;
+        height: 14px;
+        float: left; }
+    .item-content-list .value .price {
+      overflow: hidden; }
+      .item-content-list .value .price span {
+        border-radius: 4px 0 0 4px;
+        display: inline-block;
+        width: auto;
+        height: 24px;
+        min-width: 16px;
+        padding: 3px 4px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-shadow: 0 1px 0 #fff;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        margin-right: -1px; }
+      .item-content-list .value .price input:nth-of-type(2) {
+        margin-left: 4px; }
+    .item-content-list .value .add-img {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: #38f;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      display: inline-block;
+      float: left; }
+    .item-content-list .value .show-img {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: #38f;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      display: inline-block;
+      float: left;
+      margin-right: 10px; }
+      .item-content-list .value .show-img img {
+        width: 100%;
+        height: 100%; }
+    .item-content-list .value input[type="file"] {
+      width: 0;
+      height: 0;
+      position: relative;
+      z-index: -10;
+      display: none; }
+    .item-content-list .value .img-size {
+      display: inline-block;
+      line-height: 32px;
+      color: #999;
+      font-size: 12px;
+      padding-top: 6px; }
+    .item-content-list .value table {
+      width: 500px;
+      background: #FFF;
+      border-left-color: #FFF;
+      border-left-width: 10px;
+      border-left-style: solid;
+      border-right-color: #FFF;
+      border-right-width: 10px;
+      border-right-style: solid;
+      border-bottom-color: #FFF;
+      border-bottom-width: 4px;
+      border-bottom-style: solid; }
+      .item-content-list .value table th {
+        line-height: 32px;
+        text-align: center; }
+        .item-content-list .value table th:nth-of-type(1) {
+          text-align: left;
+          padding-left: 6px; }
+        .item-content-list .value table th:last-of-type {
+          text-align: right; }
+      .item-content-list .value table td {
+        width: 10%;
+        border-top: 1px solid #ddd; }
+        .item-content-list .value table td input {
+          width: 90%;
+          margin: 4px 5%;
+          border: 1px solid #efefef;
+          text-align: center; }
+          .item-content-list .value table td input:focus {
+            outline: 0; }
+        .item-content-list .value table td:nth-of-type(1) {
+          text-align: left; }
+          .item-content-list .value table td:nth-of-type(1) input {
+            text-align: left; }
+        .item-content-list .value table td:last-of-type {
+          text-align: right; }
+          .item-content-list .value table td:last-of-type input {
+            text-align: right; }
+    .item-content-list .value .add-spec {
+      padding-top: 5px;
+      color: #38f;
+      cursor: pointer; }
+
+.clearFix:after, .content-main .tabs:after {
+  content: "";
+  clear: both; }
+
+.clear {
+  clear: both;
+  height: 0; }
+
+.sub_btn_div {
+  background: #ffc;
+  padding-top: 20px; }
+
+.btn {
+  padding: 8px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #FFF;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #4b0;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border-radius: 4px;
+  display: block; }
+
+.next_step {
+  background: #07d;
+  color: #FFF;
+  margin: 0 auto 0; }
+
+.add_tag {
+  float: left;
+  margin-left: 10px;
+  line-height: 32px;
+  cursor: pointer;
+  color: #07d; }
+
+/*# sourceMappingURL=style.css.map */

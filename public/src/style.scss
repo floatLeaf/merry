@@ -1,0 +1,438 @@
+$bg-color: #F2F2F2;
+$lf: left;
+$rg: right;
+
+@mixin col ($width: 50%) {
+	width: $width;
+}
+
+@mixin tableWidth ($width: 500px) {
+	width: $width;
+}
+
+input, select {
+	display: inline-block;
+    box-sizing: border-box;
+    width: 250px;
+    height: 32px;
+    padding: 3px 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    float: left;
+}
+.normalInput {
+	width: 250px;
+}
+.shortInput {
+	width: 110px;
+	margin-right: 10px;
+}
+.longInput {
+	width: 500px;
+}
+textarea {
+	width: 364px;
+  	height: 100px;
+  	border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.smallTextarea {
+	width: 250px;
+	height: 80px;
+}
+%focus { 
+	border-color: rgba(82,168,236,.8);
+    outline: 0;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+}
+
+.lf {
+	float: $lf;
+}
+.rg {
+	float: $rg;
+}
+.align-center {
+	text-align: center;
+}
+
+body {
+	background: $bg-color;
+}
+a {
+	color: #38f;
+}
+.content-top {
+	height: 63px;
+	line-height: 63px;
+	background: #FFF;
+	padding: 0 30px;
+}
+
+.content-main {
+	padding: 15px; 
+	margin: 15px;
+	background: #FFF;
+
+	.tabs {
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 20px;
+		@extend .clearFix;
+
+		.tab-item {
+			@extend .lf; 
+			@include col(50%);
+			@extend .align-center;
+			font-weight: bold;
+			background: $bg-color;
+			border: 1px solid #ddd;
+			box-sizing: border-box;
+		}
+
+		.tab-item:nth-child(2) {
+			border-left: 0;
+		}
+		.active {
+			background: #FFF;
+		}
+	}
+
+	.main-items {
+		background: $bg-color;
+
+		.item {
+			overflow: hidden;
+			width: 100%;
+			position: relative;
+			border: {
+				bottom: {
+					width: 8px;
+					style: solid;
+					color: #FFF;
+				}
+			}
+
+			.item-name {
+				@extend .lf;
+				@extend .align-center;
+				padding: 20px 0;
+				width: 90px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-weight: bold;
+				line-height: 32px;
+			}
+
+			.item-content {
+				padding: 20px 0;
+				width: auto;
+				margin-left: 100px;
+				border: {
+					left: {
+						width: 2px;
+						style: solid;
+						color: #FFF;
+					}
+				}
+
+				textarea {
+			
+				}
+			}
+
+		}
+	}
+}
+
+
+.item-content-list {
+	width: 100%;
+	margin-bottom: 12px;
+	position: relative;
+
+	.name {
+		@extend .lf;
+		width: 110px;
+		text-align: right;
+		line-height: 32px;
+		height: 32px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.value {
+	    display: inline-block;
+	    margin-left: 120px;
+	    overflow: hidden;
+
+	    label {
+	    	display: inline-block;
+		    position: relative;
+		    padding-left: 20px;
+		    margin-right: 20px;
+		    height: 34px;
+		    line-height: 34px;
+		    @extend .lf;
+
+		    input[type="radio"] {
+		    	position: absolute;
+			    left: 0;
+			    top: 10px;
+			    width: 14px;
+			    height: 14px;
+			    float: left;
+
+			    &:focus {
+			    	@extend %focus;
+			    }
+		    }
+	    }
+
+	    input {
+    		
+	    	
+
+	    	&:focus {
+		    	@extend %focus;
+		    }
+	    }
+
+	    textarea {
+	    	
+	    	
+
+	    	&:focus {
+		    	@extend %focus;
+		    }
+	    }
+
+	    select {
+	    	
+	    	
+
+	    	&:focus {
+		    	@extend %focus;
+		    }
+	    }
+
+	    .price {
+	    	overflow: hidden;
+	    	span {
+	    		@extend .lf;
+			    border-radius: 4px 0 0 4px;
+			    display: inline-block;
+			    width: auto;
+			    height: 24px;
+			    min-width: 16px;
+			    padding: 3px 4px;
+			    font-size: 14px;
+			    font-weight: 400;
+			    line-height: 24px;
+			    text-align: center;
+			    text-shadow: 0 1px 0 #fff;
+			    background-color: #eee;
+			    border: 1px solid #ccc;
+			    margin-right: -1px;
+	    	}
+
+	    	input {
+	    		
+
+	    		&:nth-of-type(2) {
+	    			margin-left: 4px;
+	    		}
+	    		&:focus {
+			    	@extend %focus;
+			    }
+	    	}
+	    }
+
+	    .add-img {
+	    	width: 50px;
+		    height: 50px;
+		    text-align: center;
+		    line-height: 50px;
+		    color: #38f;
+		    box-sizing: border-box;
+		    border: 1px solid #ddd;
+		    cursor: pointer;
+		    display: inline-block;
+		    float: left;
+	    }
+
+	    .show-img {
+	    	width: 50px;
+		    height: 50px;
+		    text-align: center;
+		    line-height: 50px;
+		    color: #38f;
+		    box-sizing: border-box;
+		    border: 1px solid #ddd;
+		    cursor: pointer;
+		    display: inline-block;
+		    float: left;
+		    margin-right: 10px;
+
+		    img {
+		    	width: 100%; 
+		    	height: 100%;
+		    }
+	    }
+
+	    input[type="file"] {
+	    	width: 0;
+		    height: 0;
+		    position: relative;
+		    z-index: -10;
+		    display: none;
+	    }
+
+	    .img-size {
+	    	display: inline-block;
+	    	line-height: 32px;
+	    	color: #999;
+	    	font-size: 12px;
+	    	padding-top: 6px;
+	    }
+
+	    table {
+	    	@include tableWidth();
+	    	background: #FFF;
+	    	border: {
+	    		left: {
+	    			color: #FFF;
+	    			width: 10px; 
+	    			style: solid;
+	    		}
+
+	    		right: {
+	    			color: #FFF;
+	    			width: 10px; 
+	    			style: solid;
+	    		}
+
+	    		bottom: {
+	    			color: #FFF;
+	    			width: 4px; 
+	    			style: solid;
+	    		}
+	    	}
+
+	    	th {
+	    		line-height: 32px;
+	    		text-align: center;
+
+	    		&:nth-of-type(1) {
+	    			text-align: left;
+	    			padding-left: 6px;
+	    		}
+	    		&:last-of-type{
+	    			text-align: right;
+	    		}
+	    	}
+	    	td {
+	    		width: 10%;
+	    		// border-right: 1px solid #ddd;
+	    		border-top: 1px solid #ddd;
+	    		input {
+	    			width: 90%;
+	    			margin: 4px 5%;
+	    			border: 1px solid #efefef;
+	    			text-align: center;
+
+	    			&:focus {
+					    outline: 0;
+	    			}
+	    		} 
+
+	    		&:nth-of-type(1) {
+	    			text-align: left;
+	    			input {
+	    				text-align: left;
+	    			}
+	    		}
+	    		&:last-of-type{
+	    			text-align: right;
+	    			input {
+	    				text-align: right;
+	    			}
+	    		}
+	    	}
+	    }
+
+	    .add-spec {
+	    	padding-top: 5px;
+	    	color: #38f;
+	    	cursor: pointer;
+	    }
+	}
+}
+
+
+
+.clearFix {
+	&:after {
+		content: "";
+		clear: both;
+	}
+}
+.clear {
+	clear: both;
+	height: 0;
+}
+
+.sub_btn_div {
+	background: #ffc;
+	padding-top: 20px;
+}
+
+.btn {
+	padding: 8px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #FFF;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #4b0;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border-radius: 4px;
+    display: block;
+}
+
+.next_step {
+    background: #07d;
+    color: #FFF;
+    margin: 0 auto 0;
+}
+
+.add_tag {
+	float: left;
+	margin-left: 10px;
+	line-height: 32px;
+	cursor: pointer;
+	color: #07d;
+	
+}

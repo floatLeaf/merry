@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>后台</title>
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<!-- 内容title -->
+	<div class="content-top">婚拍管理 / 添加婚拍</div>
+
+	<div class="content-main" id="app">
+		<form method="POST" action="">
+			<!-- 表单内容 -->
+			<div class="main-items">
+				<!-- 商品信息 -->
+				<div class="item">
+					<div class="item-name">产品信息</div>
+					<div class="item-content">
+						<!-- 商品名称 -->
+						<div class="item-content-list">
+							<div class="name">产品名称：</div>
+							<div class="value">
+								<input type="text" name="name" value="">
+							</div>
+						</div>
+
+						<!-- 目的地名称 -->
+						<div class="item-content-list">
+							<div class="name">目的地名称：</div>
+							<div class="value">
+								<select name="destination">
+									<option></option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 目的地名称 -->
+						<div class="item-content-list">
+							<div class="name">小标签：</div>
+							<div class="value">
+								<input v-for="ta1g in tags" type="text" class="shortInput" name="tag" v-model="ta1g">
+								<p class="add_tag" @click='addTags()'>添加</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<!-- 产品参数 -->
+				<div class="item">
+					<div class="item-name">产品参数</div>
+					<div class="item-content">
+						<!-- 产品图片 -->
+						<div class="item-content-list">
+							<div class="name">产品图片：</div>
+							<div class="value">
+								<div class="show-img">
+									<img src="">
+									<input type="hidden" name="cover_img">
+								</div>
+
+								<div class="add-img">+加图</div>
+								<input type="file">
+								<!-- 清除浮动 -->
+								<div class="clear"></div>
+								<p class="img-size">推荐图片比例480*646</p>
+							</div>
+						</div>
+
+
+						<!-- 轮播图片 -->
+						<div class="item-content-list">
+							<div class="name">轮播图片：</div>
+							<div class="value">
+								<div class="show-img">
+									<img src="">
+									<input type="hidden" name="slide_img">
+								</div>
+
+								<div class="add-img">+加图</div>
+								<input type="file">
+								<!-- 清除浮动 -->
+								<div class="clear"></div>
+								<p class="img-size">推荐图片比例480*646</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="sub_btn_div">
+				<button class="btn next_step submit" type="submit">提交</button>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="/package/vue/dist/vue.js"></script>
+<script type="text/javascript" src="/package/vue-resource/dist/vue-resource.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			$data: '', //用来编辑
+			// datas: {
+			// 	tags: [''],
+			// 	cover_img: '',
+			// 	slide_img: [],
+			// },
+			tags: [1, 2, 3]
+		},
+		create: function(){
+			// console.log(this.datas.tags.length);
+			// if (this.$data != "") {
+			// 	data = this.$data;
+			// }
+		},
+		methods: {
+			addTags: function () {
+				this.tags.push('2');
+				console.log(typeof this.tags);
+			}
+		}
+	});
+</script>
+</html>
